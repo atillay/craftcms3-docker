@@ -5,5 +5,5 @@
 - Start container: `$ docker-compose up -d` 
 - Enter container: `$ docker-compose exec app bash` 
     - `$ composer install` 
-    - `$ ./craft install` 
+    - `$ craft install` 
 - Visit: `http://localhost:8084/admin`
