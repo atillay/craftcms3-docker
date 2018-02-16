@@ -1,5 +1,7 @@
 # Craft CMS 3 + Docker
 
 ## Quickstart
-- docker-compose up
-- docker-compose exec app bash ./craft install
+- Start container: `$ docker-compose up` 
+- Enter container: `$ docker-compose exec app bash` 
+    - `$ composer install` 
+    - `$ ./craft install` 
