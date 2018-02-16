@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+
+    app:
+        build:
+            context: ./docker/php
+        links:
+            - mysql
+        volumes:
+            - ".:/var/www/app"
+            - "./docker/volumes/app/log:/var/www/app/var/log"
+
+    mysql:
+        image: mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=StrongPassword
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USER}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+        volumes:
+            - "./docker/volumes/mysql:/var/lib/mysql"
+
+    nginx:
+        build:
+            context: ./docker/nginx
+        ports:
+            - "${SERVER_PORT}:80"
+        links:
+            - app
+        volumes:
+            - "./docker/volumes/nginx/:/var/log/nginx"
+        volumes_from:
+            - app
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "${PMA_PORT}:80"
+        links:
+            - mysql
+        environment:
+            - PMA_HOST=${DB_SERVER}
+
+    maildev:
+        image: djfarrelly/maildev
+        ports:
+            - "${MAILDEV_PORT}:80"
