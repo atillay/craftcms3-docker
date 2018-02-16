@@ -1,4 +1,4 @@
-# Craft3 + Docker
+# Craft CMS 3 + Docker
 
 ## Quickstart
 - docker-compose up
