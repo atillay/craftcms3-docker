@@ -1,4 +1,4 @@
-# Craft CMS 3 + Docker
+# Craft CMS 3 (RC-13) + Docker
 
 ## Quickstart
 - Configure env: `cp .env.example .env` 
