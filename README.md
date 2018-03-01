@@ -6,4 +6,5 @@
 - Enter container: `$ docker-compose exec app bash` 
     - `$ composer install` 
     - `$ craft install` 
+    - `$ craft migrare/up` (optional, generates a homepage)
 - Visit: `http://localhost:8084/admin`
