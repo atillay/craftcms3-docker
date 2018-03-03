@@ -17,10 +17,8 @@ class m180303_133623_MailSettings extends Migration
     public function safeUp()
     {
         /** @var MailSettings $settings */
-        $settings = new MailSettings();
+        $settings = Craft::$app->getSystemSettings()->getEmailSettings();
 
-        $settings->fromEmail = 'admin@craft.local';
-        $settings->fromName = 'CraftCMS';
         $settings->transportType = 'craft\mail\transportadapters\Smtp';
         $settings->transportSettings = [
             'host'              => 'maildev',
@@ -32,7 +30,7 @@ class m180303_133623_MailSettings extends Migration
             'timeout'           => 10
         ];
 
-        Craft::$app->getSystemSettings()->saveSettings('email', $settings->toArray());
+        return Craft::$app->getSystemSettings()->saveSettings('email', $settings->toArray());
     }
 
     /**
@@ -40,7 +38,12 @@ class m180303_133623_MailSettings extends Migration
      */
     public function safeDown()
     {
-        echo "m180303_133623_MailSettings cannot be reverted, visit /admin/settings/email to modify.\n";
-        return false;
+        /** @var MailSettings $settings */
+        $settings = Craft::$app->getSystemSettings()->getEmailSettings();
+
+        $settings->transportType = 'craft\mail\transportadapters\Sendmail';
+        $settings->transportSettings = null;
+
+        return Craft::$app->getSystemSettings()->saveSettings('email', $settings->toArray());
     }
 }
