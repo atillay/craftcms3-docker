@@ -1,7 +1,5 @@
 FROM debian:jessie
 
-ARG env
-
 RUN apt-get update && apt-get install -y \
     nginx \
     wget
