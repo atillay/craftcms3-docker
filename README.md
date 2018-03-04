@@ -1,5 +1,7 @@
 # Craft CMS 3 (RC-13) + Docker
 
+About CraftCMS : https://github.com/craftcms
+
 ## Quickstart
 - Configure env: `cp .env.example .env` 
 - Start container: `$ docker-compose up -d` 
