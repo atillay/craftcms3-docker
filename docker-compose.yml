@@ -2,14 +2,13 @@ version: '2'
 
 services:
 
-    app:
+    php:
         build:
             context: ./docker/php
         links:
             - mysql
         volumes:
-            - ".:/var/www/app"
-            - "./docker/volumes/app/log:/var/www/app/var/log"
+            - ".:/var/www"
 
     mysql:
         image: mysql
@@ -27,11 +26,11 @@ services:
         ports:
             - "${SERVER_PORT}:80"
         links:
-            - app
+            - php
         volumes:
             - "./docker/volumes/nginx/:/var/log/nginx"
         volumes_from:
-            - app
+            - php
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
