@@ -1,4 +1,4 @@
-# Craft CMS 3 (RC-13) + Docker
+# Craft CMS 3 (RC-14) + Docker
 
 About CraftCMS : https://github.com/craftcms
 
