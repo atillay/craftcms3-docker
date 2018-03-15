@@ -14,3 +14,17 @@ About CraftCMS : https://github.com/craftcms
 You can manage the database : `http://localhost:8085`  
 You can view sent mails : `http://localhost:8086`  
 You can view logs in : `docker/volumes/nginx`
+
+## Customize PHP image
+The PHP image is host on Docker Hub because first build takes a long time.  
+You can use your own custom version by modifying your docker-compose.yml.
+```yml
+services:
+    php:
+        build:
+            context: ./docker/php
+```
+
+### Release new version on Docker Hub
+- `$ docker build -t atillay/craftcms3-php ./docker/php` 
+- `$ docker push atillay/craftcms3-php` 

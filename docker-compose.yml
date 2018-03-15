@@ -3,8 +3,7 @@ version: '2'
 services:
 
     php:
-        build:
-            context: ./docker/php
+        image: atillay/craftcms3-php
         links:
             - mysql
         volumes:
