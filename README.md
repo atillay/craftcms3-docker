@@ -1,4 +1,4 @@
-# Craft CMS 3 (RC-14) + Docker
+# Craft CMS 3 (RC-15) + Docker
 
 About CraftCMS : https://github.com/craftcms
 
@@ -8,7 +8,7 @@ About CraftCMS : https://github.com/craftcms
 - Enter container: `$ docker-compose exec php bash` 
     - `$ composer install` 
     - `$ craft install` 
-    - `$ craft migrare/up` (optional, generates a homepage & maildev settings)
+    - `$ craft migrate/up` (optional, generates a homepage & maildev settings)
 - Visit: `http://localhost:8084` (/admin to access Craft admin)
 
 You can manage the database : `http://localhost:8085`  
