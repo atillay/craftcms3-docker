@@ -34,12 +34,10 @@
     }
   },
   "scripts": {
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@composer dump-autoload -o",
-      "@php craft setup/welcome"
+    "post-install-cmd": [
+      "chmod -R 777 config",
+      "chmod -R 777 storage",
+      "find ./web -type d -exec chmod 777 {} +"
     ]
   }
 }
