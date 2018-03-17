@@ -28,6 +28,6 @@ services:
             context: ./docker/php
 ```
 ___
-**Release new version on Docker Hub :**
-1. `$ docker build -t atillay/craftcms3-php ./docker/php` 
-2. `$ docker push atillay/craftcms3-php` 
+**Release new version on Docker Hub :**  
+`$ docker build -t atillay/craftcms3-php ./docker/php` 
+`$ docker push atillay/craftcms3-php` 
