@@ -11,9 +11,9 @@ Download Docker : https://www.docker.com/community-edition#/download
     - `$ craft install` 
     - `$ craft migrate/up` (optional, generates a homepage & mail settings)
 
-> Website : `http://localhost:8084`  
-> PhpMyAdmin : `http://localhost:8085`  
-> Mail catcher : `http://localhost:8086`  
+> Website : `http://localhost:8080`  
+> PhpMyAdmin : `http://localhost:8081`  
+> Mail catcher : `http://localhost:8082`  
 > Logs : `log/access.log` and `log/error.log`
 
 ## :whale: Customize PHP image
