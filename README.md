@@ -16,6 +16,8 @@ Download Docker : https://www.docker.com/community-edition#/download
 > Mail catcher : `http://localhost:8082`  
 > Logs : `log/access.log` and `log/error.log`
 
+:warning: Always run commands from container (ex: `docker-compose exec php bash` then `composer require guzzlehttp/guzzle`)
+
 ## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
 You can use your own custom version by modifying your docker-compose.yml.
