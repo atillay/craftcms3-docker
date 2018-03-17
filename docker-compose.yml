@@ -27,7 +27,7 @@ services:
         links:
             - php
         volumes:
-            - "./docker/volumes/nginx/:/var/log/nginx"
+            - "./log:/var/log/nginx"
         volumes_from:
             - php
 

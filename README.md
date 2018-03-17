@@ -14,7 +14,7 @@ Download Docker : https://www.docker.com/community-edition#/download
 > Website : `http://localhost:8084`  
 > PhpMyAdmin : `http://localhost:8085`  
 > Mail catcher : `http://localhost:8086`  
-> Logs : `docker/volumes/nginx`
+> Logs : `log/access.log` and `log/error.log`
 
 ## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
@@ -26,6 +26,6 @@ services:
             context: ./docker/php
 ```
 ___
-Release new version on Docker Hub :
+**Release new version on Docker Hub :**
 1. `$ docker build -t atillay/craftcms3-php ./docker/php` 
 2. `$ docker push atillay/craftcms3-php` 

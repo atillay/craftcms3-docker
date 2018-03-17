@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
 .env
-var/
 vendor/
+log/
+volumes/
 config/license.key
