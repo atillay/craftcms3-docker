@@ -29,5 +29,5 @@ services:
 ```
 ___
 **Release new version on Docker Hub :**  
-`$ docker build -t atillay/craftcms3-php ./docker/php` 
+`$ docker build -t atillay/craftcms3-php ./docker/php`  
 `$ docker push atillay/craftcms3-php` 
