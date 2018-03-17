@@ -3,7 +3,7 @@
 About CraftCMS : https://github.com/craftcms  
 Download Docker : https://www.docker.com/community-edition#/download
 
-## Quickstart
+## :rocket: Quickstart
 - Configure env: `$ cp .env.example .env` 
 - Start container: `$ docker-compose up -d` 
 - Enter container: `$ docker-compose exec php bash` 
@@ -11,12 +11,12 @@ Download Docker : https://www.docker.com/community-edition#/download
     - `$ craft install` 
     - `$ craft migrate/up` (optional, generates a homepage & mail settings)
 
-Website : `http://localhost:8084` (/admin to access Craft admin)
-PhpMyAdmin : `http://localhost:8085`  
-Mail catcher : `http://localhost:8086`  
-Logs : `docker/volumes/nginx`
+> Website : `http://localhost:8084`  
+> PhpMyAdmin : `http://localhost:8085`  
+> Mail catcher : `http://localhost:8086`  
+> Logs : `docker/volumes/nginx`
 
-## Customize PHP image
+## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
 You can use your own custom version by modifying your docker-compose.yml.
 ```yml
@@ -25,7 +25,7 @@ services:
         build:
             context: ./docker/php
 ```
-
-### Release new version on Docker Hub
-- `$ docker build -t atillay/craftcms3-php ./docker/php` 
-- `$ docker push atillay/craftcms3-php` 
+___
+Release new version on Docker Hub :
+1. `$ docker build -t atillay/craftcms3-php ./docker/php` 
+2. `$ docker push atillay/craftcms3-php` 
