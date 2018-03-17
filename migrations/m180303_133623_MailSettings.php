@@ -4,6 +4,8 @@ namespace craft\contentmigrations;
 
 use Craft;
 use craft\db\Migration;
+use craft\mail\transportadapters\Sendmail;
+use craft\mail\transportadapters\Smtp;
 use craft\models\MailSettings;
 
 /**
@@ -19,7 +21,7 @@ class m180303_133623_MailSettings extends Migration
         /** @var MailSettings $settings */
         $settings = Craft::$app->getSystemSettings()->getEmailSettings();
 
-        $settings->transportType = 'craft\mail\transportadapters\Smtp';
+        $settings->transportType = Smtp::class;
         $settings->transportSettings = [
             'host'              => 'maildev',
             'port'              => 25,
@@ -41,7 +43,7 @@ class m180303_133623_MailSettings extends Migration
         /** @var MailSettings $settings */
         $settings = Craft::$app->getSystemSettings()->getEmailSettings();
 
-        $settings->transportType = 'craft\mail\transportadapters\Sendmail';
+        $settings->transportType = Sendmail::class;
         $settings->transportSettings = null;
 
         return Craft::$app->getSystemSettings()->saveSettings('email', $settings->toArray());
