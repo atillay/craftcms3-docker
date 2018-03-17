@@ -23,7 +23,7 @@ services:
         build:
             context: ./docker/nginx
         ports:
-            - "${SERVER_PORT}:80"
+            - "${CRAFT_PORT}:80"
         links:
             - php
         volumes:
