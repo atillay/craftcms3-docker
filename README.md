@@ -1,19 +1,20 @@
 # Craft CMS 3 (RC-15) + Docker
 
-About CraftCMS : https://github.com/craftcms
+About CraftCMS : https://github.com/craftcms  
+Download Docker : https://www.docker.com/community-edition#/download
 
 ## Quickstart
-- Configure env: `cp .env.example .env` 
+- Configure env: `$ cp .env.example .env` 
 - Start container: `$ docker-compose up -d` 
 - Enter container: `$ docker-compose exec php bash` 
     - `$ composer install` 
     - `$ craft install` 
-    - `$ craft migrate/up` (optional, generates a homepage & maildev settings)
-- Visit: `http://localhost:8084` (/admin to access Craft admin)
+    - `$ craft migrate/up` (optional, generates a homepage & mail settings)
 
-You can manage the database : `http://localhost:8085`  
-You can view sent mails : `http://localhost:8086`  
-You can view logs in : `docker/volumes/nginx`
+Website : `http://localhost:8084` (/admin to access Craft admin)
+PhpMyAdmin : `http://localhost:8085`  
+Mail catcher : `http://localhost:8086`  
+Logs : `docker/volumes/nginx`
 
 ## Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
