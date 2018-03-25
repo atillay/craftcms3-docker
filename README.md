@@ -1,4 +1,4 @@
-# Craft CMS 3 (RC-15) + Docker
+# Craft CMS 3 (RC-16) + Docker
 
 About CraftCMS : https://github.com/craftcms  
 Download Docker : https://www.docker.com/community-edition#/download
