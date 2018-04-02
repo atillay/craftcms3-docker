@@ -1,4 +1,4 @@
-# Craft CMS 3 (RC-16) + Docker
+# Craft CMS 3 (RC-17) + Docker
 
 About CraftCMS : https://github.com/craftcms  
 Download Docker : https://www.docker.com/community-edition#/download
@@ -9,7 +9,6 @@ Download Docker : https://www.docker.com/community-edition#/download
 - Enter container: `$ docker-compose exec php bash` 
     - `$ composer install` 
     - `$ craft install` 
-    - `$ craft migrate/up` (optional, generates a homepage & mail settings)
 
 > Website : `http://localhost:8080`  
 > PhpMyAdmin : `http://localhost:8081`  
