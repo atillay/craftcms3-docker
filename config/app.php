@@ -13,9 +13,30 @@
  * built-in system components.
  */
 
+use craft\helpers\MailerHelper;
+use craft\mail\transportadapters\Smtp;
+
 return [
     'modules' => [
         'my-module' => \modules\Module::class,
     ],
-    //'bootstrap' => ['my-module'],
+    'components' => [
+        'mailer' => function() {
+
+            $settings = Craft::$app->getSystemSettings()->getEmailSettings();
+
+            $settings->transportType = Smtp::class;
+            $settings->transportSettings = [
+                'host'              => 'maildev',
+                'port'              => 25,
+                'useAuthentication' => false,
+                'username'          => null,
+                'password'          => null,
+                'encryptionMethod'  => null,
+                'timeout'           => 10
+            ];
+
+            return MailerHelper::createMailer($settings);
+        }
+    ],
 ];
