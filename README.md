@@ -1,4 +1,4 @@
-# Craft CMS 3 (RC-17) + Docker
+# Craft CMS 3 + Docker
 
 About CraftCMS : https://github.com/craftcms  
 Download Docker : https://www.docker.com/community-edition#/download
@@ -16,6 +16,12 @@ Download Docker : https://www.docker.com/community-edition#/download
 > Logs : `log/access.log` and `log/error.log`
 
 :warning: Always run commands from container (ex: `docker-compose exec php bash` then `composer require guzzlehttp/guzzle`)
+
+## :up: Update process
+- Get latest version number : https://github.com/craftcms/cms/releases
+- Change `craftcms/cms` version in `composer.json`
+- Run `$ composer update`
+- Visit `localhost:8080/admin` and click on "Finish"
 
 ## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  

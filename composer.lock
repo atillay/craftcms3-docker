@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bdb714fe05ab7577378f6fb3c694e0d",
+    "content-hash": "1f970691d3224f7cc3700369cd8d371a",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -324,16 +324,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC17.1",
+            "version": "3.0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "c638b66f752656ac56706a514d0e945319bd70ba"
+                "reference": "5359837c8f0f565c447a57e7c64e956a4e999dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/c638b66f752656ac56706a514d0e945319bd70ba",
-                "reference": "c638b66f752656ac56706a514d0e945319bd70ba",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5359837c8f0f565c447a57e7c64e956a4e999dce",
+                "reference": "5359837c8f0f565c447a57e7c64e956a4e999dce",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-03-29T22:24:07+00:00"
+            "time": "2018-04-04T17:48:42+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -2684,9 +2684,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "craftcms/cms": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
