@@ -23,6 +23,9 @@ return [
 
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
+
+        // Disable DB backup in dev environment
+        'backupOnUpdate' => getenv('ENVIRONMENT') !== 'dev',
     ],
 
     // Dev environment settings

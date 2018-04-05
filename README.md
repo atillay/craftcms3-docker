@@ -17,11 +17,13 @@ Download Docker : https://www.docker.com/community-edition#/download
 
 :warning: Always run commands from container (ex: `docker-compose exec php bash` then `composer require guzzlehttp/guzzle`)
 
-## :up: Update process
+## :up: Craft update process
 - Get latest version number : https://github.com/craftcms/cms/releases
 - Change `craftcms/cms` version in `composer.json`
+- Run `$ docker-compose up -d`
+- Enter container `$ docker-compose exec php bash`
 - Run `$ composer update`
-- Visit `localhost:8080/admin` and click on "Finish"
+- Run `$ craft migrate/all`
 
 ## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
