@@ -32,9 +32,6 @@ return [
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
-
-        // Disable DB backup in dev environment
-        'backupOnUpdate' => false,
     ],
 
     // Staging environment settings

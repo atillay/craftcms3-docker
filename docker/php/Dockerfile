@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     libicu-dev g++ \
     libcurl4-openssl-dev \
-    libxml2-dev
+    libxml2-dev \
+    mysql-client
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
