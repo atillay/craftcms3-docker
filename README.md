@@ -20,8 +20,7 @@ Download Docker : https://www.docker.com/community-edition#/download
 ## :up: Craft update process
 - Get latest version number : https://github.com/craftcms/cms/releases
 - Change `craftcms/cms` version in `composer.json`
-- Run `$ docker-compose up -d`
-- Enter container `$ docker-compose exec php bash`
+- Start and enter container (cf: Quickstart)
 - Run `$ composer update`
 - Run `$ craft migrate/all`
 
