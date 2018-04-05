@@ -23,9 +23,6 @@ return [
 
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
-
-        // Disable DB backup in dev environment
-        'backupOnUpdate' => getenv('ENVIRONMENT') !== 'dev',
     ],
 
     // Dev environment settings
@@ -35,6 +32,9 @@ return [
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,
+
+        // Disable DB backup in dev environment
+        'backupOnUpdate' => false,
     ],
 
     // Staging environment settings
