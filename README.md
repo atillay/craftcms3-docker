@@ -1,4 +1,5 @@
 # Craft CMS 3 + Docker
+> Get started playing with Craft CMS 3 in a few command lines with Docker
 
 About CraftCMS : https://github.com/craftcms  
 Download Docker : https://www.docker.com/community-edition#/download
@@ -10,10 +11,12 @@ Download Docker : https://www.docker.com/community-edition#/download
     - `$ composer install` 
     - `$ craft install` 
 
-> Website : `http://localhost:8080`  
-> PhpMyAdmin : `http://localhost:8081`  
-> Mail catcher : `http://localhost:8082`  
-> Logs : `log/access.log` and `log/error.log`
+| Service      | Path                    |
+| ------------ | ----------------------- |
+| Website      | `http://localhost:8080` | 
+| PhpMyAdmin   | `http://localhost:8081` |
+| Mail catcher | `http://localhost:8082` |
+| Logs         | `log/`                  |
 
 :warning: Always run commands from container (ex: `docker-compose exec php bash` then `composer require guzzlehttp/guzzle`)
 
