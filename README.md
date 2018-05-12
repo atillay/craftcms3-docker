@@ -27,6 +27,12 @@ Download Docker : https://www.docker.com/community-edition#/download
 - Run `$ composer update`
 - Run `$ craft migrate/all`
 
+## :tent: Use a virtual host
+- Run `$ sudo nano /etc/hosts` and add `127.0.0.1   my-vhost.local`
+- Modify `.env` and set `SITE_URL=my-host.local` + `CRAFT_PORT=80`
+- Run `$ docker-compose up`
+- If it fails make sure no service like Apache is running on port 80 
+
 ## :whale: Customize PHP image
 The PHP image is host on Docker Hub because first build takes a long time.  
 You can use your own custom version by modifying your docker-compose.yml.

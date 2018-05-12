@@ -28,7 +28,7 @@ return [
     // Dev environment settings
     'dev' => [
         // Base site URL
-        'siteUrl' => getenv('CRAFT_PORT') ? sprintf('localhost:%s', getenv('CRAFT_PORT')) : null,
+        'siteUrl' => getenv('SITE_URL'),
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => true,

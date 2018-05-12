@@ -27,13 +27,13 @@ return [
 
             $settings->transportType = Smtp::class;
             $settings->transportSettings = [
-                'host'              => 'maildev',
-                'port'              => 25,
-                'useAuthentication' => false,
-                'username'          => null,
-                'password'          => null,
-                'encryptionMethod'  => null,
-                'timeout'           => 10
+                'host'              => getenv('SMTP_HOST') ?: 'localhost',
+                'port'              => getenv('SMTP_PORT') ?: 25,
+                'useAuthentication' => getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'),
+                'username'          => getenv('SMTP_USERNAME') ?: null,
+                'password'          => getenv('SMTP_PASSWORD') ?: null,
+                'encryptionMethod'  => getenv('SMTP_ENCRYPTION') ?: null,
+                'timeout'           => getenv('SMTP_TIMEOUT') ?: 10
             ];
 
             return MailerHelper::createMailer($settings);
