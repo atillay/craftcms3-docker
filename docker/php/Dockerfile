@@ -26,6 +26,6 @@ RUN docker-php-ext-install intl
 
 COPY ./php.ini /usr/local/etc/php/
 
-RUN echo 'alias craft="/var/www/craft"' >> ~/.bashrc
+RUN ln -s /var/www/craft /usr/local/bin
 
 WORKDIR /var/www

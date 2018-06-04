@@ -18,7 +18,7 @@ Download Docker : https://www.docker.com/community-edition#/download
 | Mail catcher | `http://localhost:8082` |
 | Logs         | `log/`                  |
 
-:warning: Always run commands from container (ex: `docker-compose exec php composer require guzzlehttp/guzzle`)
+:warning: Always run commands from container (ex: `docker-compose exec php craft` or `docker-compose exec php composer require guzzlehttp/guzzle`)
 
 ## :up: Craft update process
 - Get latest version number : https://github.com/craftcms/cms/releases
