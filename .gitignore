@@ -4,5 +4,4 @@
 vendor/
 .composer/
 log/
-volumes/
 config/license.key

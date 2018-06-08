@@ -1,10 +1,10 @@
 version: '3'
-
 services:
 
     php:
         image: atillay/craftcms3-php
         volumes:
+            - ./docker/php/php.ini:/usr/local/etc/php/php.ini
             - .:/var/www
 
     nginx:
@@ -13,6 +13,7 @@ services:
         ports:
             - ${CRAFT_PORT}:80
         volumes:
+            - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./log:/var/log/nginx
             - ./web:/var/www/web
 
@@ -23,8 +24,6 @@ services:
             - MYSQL_DATABASE=${DB_DATABASE}
             - MYSQL_USER=${DB_USER}
             - MYSQL_PASSWORD=${DB_PASSWORD}
-        volumes:
-            - ./docker/volumes/mysql:/var/lib/mysql
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin

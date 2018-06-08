@@ -42,6 +42,14 @@ services:
         build:
             context: ./docker/php
 ```
+
+## About MySQL credentials
+If you change mysql credentials in .env you have to re-create mysql container:
+- Database will be deleted, make a dump with PhpMyAdmin
+- Get the container name : `$ docker-compose ps | grep mysql`
+- Remove container : `$ docker rm {container_name}` (ex: `docker rm craft3-docker_mysql_1`)
+- Run : `docker-compose up` 
+- Re-import your database on PhpMyAdmin
 ___
 **Release new version on Docker Hub :**  
 `$ docker build -t atillay/craftcms3-php ./docker/php`  
