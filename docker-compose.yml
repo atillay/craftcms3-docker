@@ -14,7 +14,7 @@ services:
             - ${CRAFT_PORT}:80
         volumes:
             - ./log:/var/log/nginx
-            - .:/var/www
+            - ./web:/var/www/web
 
     mysql:
         image: mysql:5.7
