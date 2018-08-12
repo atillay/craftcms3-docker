@@ -33,21 +33,23 @@ Download Docker : https://www.docker.com/community-edition#/download
 - Run `$ docker-compose up`
 - If it fails make sure no service like Apache is running on port 80 
 
-## :whale: Customize PHP image
-The PHP image is host on Docker Hub because first build takes a long time.  
+## :whale: Customize PHP or Nginx image
+The PHP and Nginx images are host on Docker Hub because first build takes a long time.  
 You can use your own custom version by modifying your docker-compose.yml.
 ```yml
 services:
     php:
         build:
             context: ./docker/php
+    nginx:
+        build:
+            context: ./docker/nginx
 ```
 
 ## About MySQL credentials
 If you change mysql credentials in .env you have to re-create mysql container:
 - Database will be deleted, make a dump with PhpMyAdmin
-- Get the container name : `$ docker-compose ps | grep mysql`
-- Remove container : `$ docker rm {container_name}` (ex: `docker rm craft3-docker_mysql_1`)
+- Remove container and volume : `$ docker-compose rm -fv mysql`
 - Run : `docker-compose up` 
 - Re-import your database on PhpMyAdmin
 ___
