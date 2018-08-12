@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "post-update-cmd": [
+    "post-install-cmd": [
       "chmod -R 777 config",
       "chmod -R 777 storage",
       "find ./web -type d -exec chmod 777 {} +"
