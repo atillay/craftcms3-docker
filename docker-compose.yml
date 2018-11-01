@@ -5,7 +5,7 @@ services:
         image: atillay/craftcms3-php
         volumes:
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini
-            - .:/var/www
+            - .:/var/www:cached
 
     nginx:
         image: atillay/craftcms3-nginx
@@ -14,7 +14,7 @@ services:
         volumes:
             - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./log:/var/log/nginx
-            - ./web:/var/www/web
+            - ./web:/var/www/web:cached
 
     mysql:
         image: mysql:5.7
