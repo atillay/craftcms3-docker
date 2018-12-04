@@ -35,16 +35,8 @@ Download Docker : https://www.docker.com/community-edition#/download
 
 ## :whale: Customize PHP or Nginx image
 The PHP and Nginx images are host on Docker Hub because first build takes a long time.  
-You can use your own custom version by modifying your docker-compose.yml.
-```yml
-services:
-    php:
-        build:
-            context: ./docker/php
-    nginx:
-        build:
-            context: ./docker/nginx
-```
+You can use volume in `docker-compose.yml` to override files in images  
+The docker images sources are available : https://github.com/atillay/docker-images/tree/master/craftcms3
 
 ## About MySQL credentials
 If you change mysql credentials in .env you have to re-create mysql container:
