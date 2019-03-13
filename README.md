@@ -21,7 +21,7 @@ Download Docker : https://www.docker.com/community-edition#/download
 :warning: Always run commands from container (ex: `docker-compose exec php craft` or `docker-compose exec php composer require guzzlehttp/guzzle`)
 
 ## :up: Craft update process
-- Get latest version number : https://github.com/craftcms/cms/releases
+- Get the latest version number : https://github.com/craftcms/cms/releases
 - Change `craftcms/cms` version in `composer.json`
 - Start and enter container (cf: Quickstart)
 - Run `$ composer update`
