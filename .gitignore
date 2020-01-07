@@ -5,3 +5,4 @@ vendor/
 .composer/
 log/
 config/license.key
+docker/db

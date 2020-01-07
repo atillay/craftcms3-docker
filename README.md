@@ -41,7 +41,7 @@ The docker images sources are available : https://github.com/atillay/docker-imag
 ## About MySQL credentials
 If you change mysql credentials in .env you have to re-create mysql container:
 - Database will be deleted, make a dump with PhpMyAdmin
-- Remove container and volume : `$ docker-compose rm -fv mysql`
+- Remove db folder  : `$ rm -rf docker/db`
 - Run : `docker-compose up` 
 - Re-import your database on PhpMyAdmin
 ___
