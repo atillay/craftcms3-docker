@@ -25,7 +25,7 @@ services:
             - MYSQL_PASSWORD=${DB_PASSWORD}
         volumes:
             - ./docker/mysql/custom.cnf:/etc/mysql/conf.d/custom.cnf
-            - ./docker/db:/var/lib/mysql
+            - ./docker/db:/var/lib/mysql:cached
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
